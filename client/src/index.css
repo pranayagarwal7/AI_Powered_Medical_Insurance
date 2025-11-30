@@ -19,7 +19,7 @@ body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
 }
 
-/* Header */
+/* HEADER + NAVBAR*/
 header{
   background: var(--blue);
   color: var(--bg);
@@ -53,12 +53,13 @@ main{
   min-height: calc(100vh - var(--header-h) - var(--footer-h));
 }
 
-/* Hero */
+/* HERO SECTION*/
 .hero-section{ padding: 56px 0 72px; }
 .hero-container{
-  display:flex; gap:56px; align-items:center;
-  width: min(1100px, 86%); margin:auto;
-  /* soft panel so the transition from header -> content feels gradual */
+  display:flex; gap:56px; 
+  align-items:center;
+  width: min(1100px, 86%); 
+  margin:auto;
   background: #fff; border:1px solid var(--muted);
   border-radius: 16px; padding: 40px 48px;
   box-shadow: 0 6px 18px rgba(51,63,72,0.06);
@@ -129,7 +130,36 @@ button{
   mask-image: linear-gradient(to left, black 86%, rgba(0,0,0,0.8) 94%, transparent 100%);
 }
 
-/* Footer */
+
+/* SIGNUP PAGE*/
+.account-form-section{
+    width: min(600px, 86%); 
+    margin:40px auto;
+}
+
+.input-div{
+    width: 50%;
+    margin: auto;
+}
+.input-div input{
+    width: 100%;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+input[type="submit"]{
+    background-color: var(--teal);
+    border: 1px solid var(--teal);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+
+.account-form-section h1, p{
+    text-align: center;
+}
+
+/* FOOTER */
 footer{
   height: var(--footer-h);
   background: var(--text); color:#E9EEF5;
@@ -150,3 +180,4 @@ footer a:hover{
      opacity:1; 
     text-decoration:underline;
  }
+

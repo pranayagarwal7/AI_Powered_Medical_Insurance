@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, Router, RouterProvider} from "react-router-dom"
 import HeroPage from './pages/HeroPage.jsx'
+import SignupPage from './pages/SignupPage.jsx'
+import LoginPage from './pages/LoginPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -14,6 +16,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HeroPage/>
+      },
+      {
+        path: "/signup",
+        element: <SignupPage/>
+      },
+      {
+        path: "/login",
+        element: <LoginPage/>
       }
     ]
   }
