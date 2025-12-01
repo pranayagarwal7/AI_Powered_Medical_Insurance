@@ -218,7 +218,7 @@ input[type="submit"]{
 
 /* QUOTE PAGE - form*/
 .quote-section{
-    width: min(800px, 86%);
+    width: min(600px, 86%);
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -229,7 +229,54 @@ input[type="submit"]{
     margin: 10px 0;
 }
 
+/* Results Section*/
+.results-section h1{
+    width: min(600px, 86%);
+    margin: 30px auto
+}
 
+.results-container{
+display:flex; gap:56px; 
+  align-items:center;
+  width: min(1100px, 86%); 
+  margin:auto;
+  background: #fff; 
+  border:1px solid var(--muted);
+  border-radius: 16px; 
+  padding: 40px 48px;
+  box-shadow: 0 6px 18px rgba(51,63,72,0.06);
+}
+
+.pred-btn-container{
+    text-align: center;
+    margin: 10px 0;
+}
+.pred-ai-btn{
+    background-color: var(--teal);
+}
+
+.pred-xai-btn{
+    background-color: var(--blue);
+}
+/* .results-container{
+    background-color: #fff;
+    width: 50%;
+    height: 30vh;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid var(--muted)
+} */
+/* .results-section h1,
+.results-section .results-subtext{
+   width: min(600px, 86%);    
+   margin: 30px auto;
+}
+.prediction-results {
+    border: 1px solid;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+} */
 
 /* FOOTER */
 footer{

@@ -8,6 +8,7 @@ import SignupPage from './pages/SignupPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import QuotePage from './pages/QuotePage.jsx'
+import ResultsPage from './components/ResultsPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/quote",
         element: <QuotePage/>
+      },
+      {
+        path: "/results",
+        element: <ResultsPage/>
       }
     ]
   }

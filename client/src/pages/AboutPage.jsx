@@ -33,7 +33,7 @@ function AboutPage(){
     }
 ]
 
-const goTo = (n) => {
+ const goTo = (n) => {
     if(n < 0) n = slides.length -1
     if (n >= slides.length) n = 0
     setIndex(n)
