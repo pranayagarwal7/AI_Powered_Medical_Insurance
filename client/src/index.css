@@ -159,6 +159,63 @@ input[type="submit"]{
     text-align: center;
 }
 
+/* ABOUT PAGE - Slide Show*/
+
+.slideshow-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Hide slides by default */
+.mySlide {
+  display: none;
+}
+
+/* Show only the active one */
+.mySlide.active-slide {
+  display: block;
+}
+
+/* Card-style content */
+.slide-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.slideshow-container h1{
+    text-align: center;
+    
+}
+
+.slideshow-container .subtitle {
+  padding-top: 5px;
+  margin: 0 auto 50px auto;
+ color: var(--text);
+ opacity: 0.9;
+  /* max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: var(--text);
+  opacity: 0.9; */
+}
+
+.slide-content .slide-subtitle{
+    text-align: left;
+}
+.slideshow-cta-btn{
+  background-color: var(--teal);
+  padding:10px 18px; 
+  border:none; 
+  border-radius:8px; 
+  font-size:1rem; 
+  margin:6px 8px 0 0;
+  cursor:pointer; 
+  transition: transform .04s ease, filter .15s ease;
+}
+
 /* FOOTER */
 footer{
   height: var(--footer-h);
