@@ -8,7 +8,7 @@ function LandingPage(){
                          <h1>Your Coverage. Clear. Fair. Transparent.</h1>
                         <h2>See the data behind your premiums and claims</h2>
                         <p>We combine advanced analytics and clear visuals to give policyholders a full breakdown of risk scores, claim factors, and pricing so you’re not in the dark about your insurance.</p>
-                        <Link to={"/login"}>
+                        <Link to={"/signup"}>
                             <button class="primary-hero-btn">Get Your Transparency Report</button>
                         </Link>
                         <Link to={"/about"}>

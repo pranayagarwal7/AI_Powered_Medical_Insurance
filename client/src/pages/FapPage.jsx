@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom"
 function FapPage(){
     return(
         <>
-            <h1>Fap Page</h1>
+              <Link to={"/med"}>
+                <button>View Premium Calculator</button>
+            </Link>
                <iframe
                     src="http://localhost:8502"
                     style={{

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 function SignupPage(){
     const [newUser, setNewUser] = useState({
         firstName: "",
@@ -9,6 +9,9 @@ function SignupPage(){
 
     })
     const [isLoggedIn, setLoggedIn] = useState(false)
+
+    const navigate = useNavigate()
+
     const handleChange = (e) =>{
         const { name, value } = e.target
         setNewUser({
@@ -17,6 +20,7 @@ function SignupPage(){
 
         }) 
     }
+
     const handleCreateNewUser = (e) => {
         e.preventDefault()
 
@@ -34,6 +38,8 @@ function SignupPage(){
         localStorage.setItem("users", JSON.stringify(users))
 
         setLoggedIn(true)
+
+        navigate("/med")
         
         } catch (error) {
             console.error(error)

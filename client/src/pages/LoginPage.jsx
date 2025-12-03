@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useState} from "react"
+import { Link, useNavigate } from "react-router-dom"
 function LoginPage(){
     const [verifyUser, setVerifyUser] = useState({
             email: "",
@@ -8,6 +8,7 @@ function LoginPage(){
         })
     
     const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         const {name, value} = e.target
@@ -17,26 +18,51 @@ function LoginPage(){
             [name]: value
         })
     }
-
+    
     const handleVerifyUser = (e) => {
         e.preventDefault()
 
         try {
-            const users = JSON.parse(localStorage.getItem("users") || "[]")
+            const users = JSON.parse(localStorage.getItem("users") || verifyUser.email)
+
             const existingUser = users.find((u) => u.email === verifyUser.email)
 
-            if(existingUser){
+            if(existingUser && existingUser.password === verifyUser.password){
                 setIsLoggedIn(true)
+
+                localStorage.setItem("currentUser", JSON.stringify(existingUser))
+
+                navigate("/med")
             } else{
-                alert("User does not exist. Please create an account")
-                setIsLoggedIn
+                alert("Invalid email or password. Please try again")
+                setIsLoggedIn(false)
             }
-            
         } catch (error) {
             console.error(error)
-            setIsLoggedIn(false)
+            setIsLoggedIn(false)   
         }
     }
+
+    // const handleVerifyUser = (e) => {
+    //     e.preventDefault()
+
+    //     try {
+    //         const users = JSON.parse(localStorage.getItem("users") || "[]")
+
+    //         const existingUser = users.find((u) => u.email === verifyUser.email)
+
+    //         if(existingUser && existingUser.password === verifyUser.password){
+    //             setIsLoggedIn(true)
+    //         } else{
+    //             alert("User does not exist. Please create an account")
+    //             setIsLoggedIn
+    //         }
+            
+    //     } catch (error) {
+    //         console.error(error)
+    //         setIsLoggedIn(false)
+    //     }
+    // }
 
     useEffect(() => {
         console.log("isLoggedIn: ", isLoggedIn)
