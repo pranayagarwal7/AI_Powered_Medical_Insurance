@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 function LandingPage(){
     return(
         <section className="hero-section">
@@ -7,8 +8,12 @@ function LandingPage(){
                          <h1>Your Coverage. Clear. Fair. Transparent.</h1>
                         <h2>See the data behind your premiums and claims</h2>
                         <p>We combine advanced analytics and clear visuals to give policyholders a full breakdown of risk scores, claim factors, and pricing so you’re not in the dark about your insurance.</p>
-                        <button class="primary-hero-btn">Get Your Transparency Report</button>
-                        <button class="secondary-hero-btn">See the Technology</button>
+                        <Link to={"/login"}>
+                            <button class="primary-hero-btn">Get Your Transparency Report</button>
+                        </Link>
+                        <Link to={"/about"}>
+                            <button class="secondary-hero-btn">See the Technology</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="hero-text">

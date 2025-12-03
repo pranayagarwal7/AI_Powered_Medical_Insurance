@@ -7,8 +7,8 @@ import HeroPage from './pages/HeroPage.jsx'
 import SignupPage from './pages/SignupPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
-import QuotePage from './pages/QuotePage.jsx'
-import ResultsPage from './components/ResultsPage.jsx'
+import MedPage from './pages/MedPage.jsx'
+import FapPage from './pages/FapPage.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,12 +33,12 @@ const router = createBrowserRouter([
         element: <AboutPage/>
       },
       {
-        path: "/quote",
-        element: <QuotePage/>
+        path: '/med',
+        element: <MedPage/>
       },
       {
-        path: "/results",
-        element: <ResultsPage/>
+        path: "/fap",
+        element: <FapPage/>
       }
     ]
   }

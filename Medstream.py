@@ -15,7 +15,7 @@ def st_shap(plot, height=None):
 # ---------- Model and Data Setup ----------
 @st.cache_data
 def load_model():
-    df = pd.read_csv("/Users/ali/Desktop/AI/1003/App/medical_insurance.csv")
+    df = pd.read_csv("datmedical_insurance.csv")
     label_cols = ['sex', 'smoker', 'region']
     for col in label_cols:
         df[col] = LabelEncoder().fit_transform(df[col])
