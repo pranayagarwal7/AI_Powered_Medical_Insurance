@@ -10,7 +10,7 @@ warnings.filterwarnings('ignore')
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('data/canada_medical_insurance_forecast_detailed.csv')
+        df = pd.read_csv('../data/canada_medical_insurance_forecast_detailed.csv')
         df['date'] = pd.to_datetime(df['date'])
         return df
     except FileNotFoundError:
