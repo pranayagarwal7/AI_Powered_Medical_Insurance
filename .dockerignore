@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+.git
+.gitignore
+.idea
+.vscode
+*.ipynb
+node_modules/
+client/node_modules/
+EDA/
+Capstone_Docs/

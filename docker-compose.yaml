@@ -1,0 +1,22 @@
+services:
+  streamlit-apps:
+    image: smehra999/med-streamlit:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: med_streamlit
+    ports:
+      - "8501:8501"   # Medstream
+      - "8502:8502"   # FAPP
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  client:
+    image: smehra999/med-client:latest
+    build:
+      context: ./client
+    container_name: med_client
+    ports:
+      - "5173:5173"
+    stdin_open: true
+    tty: true
